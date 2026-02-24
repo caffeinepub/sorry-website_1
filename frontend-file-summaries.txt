@@ -1,0 +1,11 @@
+{
+  "frontend/src/App.tsx": "Root application component that composes the full single-page sorry website by rendering Hero, ForgivenessPage, LetterSection, and Footer in sequence — MemoriesSection has been removed entirely.",
+  "frontend/src/components/FadeIn.tsx": "Reusable scroll-triggered fade-in wrapper component using IntersectionObserver with configurable delay for staggered entrance animations.",
+  "frontend/src/components/Hero.tsx": "Full-viewport hero section with animated floating petal emojis, a heartfelt \"I'm Sorry\" title in large serif type, an emotional subtitle, and a smooth scroll-down indicator.",
+  "frontend/src/components/MemoriesSection.tsx": "Responsive 3-column grid of exactly 3 memory cards with staggered FadeIn animations; all three cards now use the uploaded couple photos — train photo for card 1, outdoor truck photo for card 2, and black saree railing photo for card 3 — each with an onError fallback to the romantic placeholder.",
+  "frontend/src/components/LetterSection.tsx": "Handwritten-style sorry letter section with a letter-paper background image, Dancing Script salutation/signature, and Playfair Display body text expressing genuine remorse and love.",
+  "frontend/src/components/Footer.tsx": "Romantic footer with a decorative heart image, closing love message in script font, and caffeine.ai attribution with UTM tracking.",
+  "frontend/src/index.css": "Global styles with Google Fonts, OKLCH color tokens, petal-fall/pulse-soft keyframes, and a new `no-orbit` CSS keyframe animation that drives the No button's continuous circular orbit around the Yes button.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with romantic font families (serif, script, body), custom rose/cream/blush color tokens, enhanced border radii, and custom memory/letter box-shadow utilities.",
+  "frontend/src/components/ForgivenessPage.tsx": "Interactive forgiveness section with a \"Did you forgive me?\" heading; the No button now continuously orbits the Yes button in a smooth circular animation (CSS keyframe, radius ~130px, loops indefinitely) instead of teleporting, while Yes still reveals the special memory card and ILY letter on click."
+}

@@ -1,0 +1,20 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as the backend entry point with no implemented methods.",
+  "feature_evidence.json": "Feature evidence report documenting the requirement to remove all three memory cards from MemoriesSection and optionally remove the section from App.tsx entirely.",
+  "frontend-file-summaries.txt": "JSON map of frontend source files to short human-readable summaries describing each component's purpose and current state.",
+  "frontend/index.css": "Tailwind base stylesheet defining OKLCH CSS custom properties for light and dark color themes including background, foreground, and chart tokens.",
+  "frontend/index.html": "Minimal HTML shell with a root div and a module script tag loading the React app entry point.",
+  "frontend/src/App.tsx": "Root app component that renders Hero, ForgivenessPage, LetterSection, and Footer in sequence with MemoriesSection removed.",
+  "frontend/src/components/FadeIn.tsx": "Scroll-triggered fade-in wrapper using IntersectionObserver that transitions children from invisible/offset to visible with a configurable delay.",
+  "frontend/src/components/Footer.tsx": "Romantic footer displaying a decorative heart image, a closing love message in script font, and a caffeine.ai attribution link with UTM tracking.",
+  "frontend/src/components/ForgivenessPage.tsx": "Interactive section asking 'Did you forgive me?' where the No button continuously orbits the Yes button via CSS animation, and clicking Yes reveals a forgiveness message.",
+  "frontend/src/components/Hero.tsx": "Full-viewport hero section with an animated petal background, large 'I'm Sorry' serif heading, and a scroll-down button.",
+  "frontend/src/components/LetterSection.tsx": "Handwritten-style sorry letter rendered on a letter-paper background image with script salutation and serif body paragraphs expressing remorse and love.",
+  "frontend/src/components/MemoriesSection.tsx": "Empty file — the MemoriesSection component has been cleared of all content.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and caches an authenticated or anonymous ICP backend actor using React Query, invalidating dependent queries whenever the identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and hook for Internet Identity authentication on the ICP platform, managing login state, identity persistence, and AuthClient lifecycle.",
+  "frontend/src/index.css": "Global stylesheet defining Tailwind base/component/utility layers, CSS custom properties for a warm romantic color theme (light/dark), custom fonts (Playfair Display, Dancing Script, Lora), and keyframe animations like petal-fall and no-orbit.",
+  "frontend/src/main.tsx": "Application entry point that mounts the React app with QueryClientProvider and InternetIdentityProvider wrapping the root App component.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with custom fonts, oklch-based color tokens (rose, cream, blush, sidebar, chart), border radii, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Tracks the project's current state (version 15), summarizing it as a personal 'sorry' website with a sorry letter, interactive forgiveness page with Yes/No buttons, and a special 'I love you' reveal card, along with a list of implemented features."
+}

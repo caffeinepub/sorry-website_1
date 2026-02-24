@@ -1,0 +1,39 @@
+{
+  "kind": "build_request",
+  "title": "Remove all memory cards from MemoriesSection",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-17",
+      "text": "In MemoriesSection.tsx, remove all three memory cards so that the 'Our Memories' section renders no cards at all. Either remove the entire section from App.tsx or render the section as empty (no card grid, no card elements). The page order should remain: Hero → (MemoriesSection removed or empty) → ForgivenessPage → LetterSection → Footer.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "just remove every memory card"
+        ]
+      },
+      "acceptanceCriteria": [
+        "No memory cards are visible anywhere on the page.",
+        "The MemoriesSection component either renders nothing or is removed from App.tsx entirely.",
+        "The rest of the page (Hero, ForgivenessPage, LetterSection, Footer) remains intact and unaffected.",
+        "No broken layout or empty whitespace block is left behind where the memory cards used to be."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui.",
+    "Do not alter ForgivenessPage, LetterSection, Hero, or Footer components."
+  ],
+  "nonGoals": [
+    "Modifying the sorry letter or forgiveness page.",
+    "Removing or altering the hero or footer sections.",
+    "Any backend changes."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

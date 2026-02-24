@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Dancing+Script:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 1rem;
+
+    /* Warm cream background */
+    --background: 0.97 0.012 75;
+    --foreground: 0.22 0.025 30;
+
+    /* Card: slightly warmer cream */
+    --card: 0.99 0.008 70;
+    --card-foreground: 0.22 0.025 30;
+
+    --popover: 0.99 0.008 70;
+    --popover-foreground: 0.22 0.025 30;
+
+    /* Primary: dusty rose */
+    --primary: 0.55 0.12 10;
+    --primary-foreground: 0.98 0.005 70;
+
+    /* Secondary: blush */
+    --secondary: 0.93 0.03 20;
+    --secondary-foreground: 0.35 0.06 15;
+
+    /* Muted */
+    --muted: 0.94 0.018 60;
+    --muted-foreground: 0.52 0.04 30;
+
+    /* Accent: warm rose */
+    --accent: 0.90 0.05 20;
+    --accent-foreground: 0.35 0.06 15;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.88 0.03 30;
+    --input: 0.88 0.03 30;
+    --ring: 0.65 0.10 10;
+
+    /* Charts */
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    /* Sidebar */
+    --sidebar: 0.97 0.012 75;
+    --sidebar-foreground: 0.22 0.025 30;
+    --sidebar-primary: 0.55 0.12 10;
+    --sidebar-primary-foreground: 0.98 0.005 70;
+    --sidebar-accent: 0.90 0.05 20;
+    --sidebar-accent-foreground: 0.35 0.06 15;
+    --sidebar-border: 0.88 0.03 30;
+    --sidebar-ring: 0.65 0.10 10;
+  }
+
+  .dark {
+    --background: 0.18 0.02 20;
+    --foreground: 0.95 0.01 60;
+    --card: 0.22 0.025 20;
+    --card-foreground: 0.95 0.01 60;
+    --popover: 0.22 0.025 20;
+    --popover-foreground: 0.95 0.01 60;
+    --primary: 0.72 0.12 10;
+    --primary-foreground: 0.18 0.02 20;
+    --secondary: 0.28 0.03 20;
+    --secondary-foreground: 0.95 0.01 60;
+    --muted: 0.28 0.03 20;
+    --muted-foreground: 0.65 0.04 30;
+    --accent: 0.32 0.05 20;
+    --accent-foreground: 0.95 0.01 60;
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.205 0 0;
+    --border: 1 0 0 / 10%;
+    --input: 1 0 0 / 15%;
+    --ring: 0.72 0.12 10;
+    --sidebar: 0.22 0.025 20;
+    --sidebar-foreground: 0.95 0.01 60;
+    --sidebar-primary: 0.72 0.12 10;
+    --sidebar-primary-foreground: 0.18 0.02 20;
+    --sidebar-accent: 0.32 0.05 20;
+    --sidebar-accent-foreground: 0.95 0.01 60;
+    --sidebar-border: 1 0 0 / 10%;
+    --sidebar-ring: 0.72 0.12 10;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Lora', Georgia, serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-script {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .font-body {
+    font-family: 'Lora', Georgia, serif;
+  }
+
+  .bg-hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      oklch(0.18 0.04 15 / 0.45) 0%,
+      oklch(0.25 0.06 10 / 0.55) 60%,
+      oklch(0.18 0.04 15 / 0.70) 100%
+    );
+  }
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translateY(-40px) rotate(0deg) translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg) translateX(60px);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+
+/*
+  No-button orbit animation.
+  The wrapper rotates around the Yes button center (which is at 50%/50% of the container).
+  The inner button counter-rotates so its text stays upright.
+  Radius = 130px (the translateX value).
+*/
+@keyframes no-orbit {
+  from {
+    transform: rotate(0deg) translateX(130px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(130px) rotate(-360deg);
+  }
+}
+
+.no-orbit-btn {
+  animation: no-orbit 4s linear infinite;
+  transform-origin: center center;
+}
+
+.animate-petal-fall {
+  animation: petal-fall linear infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2.5s ease-in-out infinite;
+}
